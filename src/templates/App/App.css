@@ -1,0 +1,101 @@
+.name{
+    text-decoration: dashed;
+}
+
+.title1 {
+    font-weight: bold;
+    padding-bottom: 1em;
+    text-shadow: 2px 2px aqua;
+}
+.title2 {
+    padding-bottom: 2em;
+}
+
+body{
+    background-color: aqua;
+}
+
+.fieb-logo{
+    text-align: center;
+    color:rgb(34, 164, 213);
+    box-shadow: 5px 4px 0px 0px rgba(121, 121, 255, 0.1);
+    background-color: #fff;
+    border-radius: 2em;
+    margin: 15px;
+    margin-inline: 10%;
+}
+
+/* footer - inicio */
+footer{
+    background-image: linear-gradient(to bottom, darkblue, red);
+    padding: 10px;
+    text-align: center;
+}
+
+.fieb-tech {
+    display: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.titulo-footer {
+    color:aqua;
+    font-weight: bold;
+    text-align:unset;
+}
+.link-footer {
+    color:#fff;
+    text-decoration: none;
+}
+.lista-footer {
+    list-style-type: none;
+}
+
+.social {
+    color:aliceblue;
+}
+.lista-social {
+    size: 1em;
+    display: inline;
+}
+.lista-social img {
+    height: 3em;
+    filter: invert(1);
+    padding-inline: 10px;
+}
+
+.copyright {
+    color:aliceblue;
+    padding-top: 2em;
+    text-decoration: dashed;
+}
+/* footer - fim */
+
+/* menu - inicio*/
+.menu{
+    background-color: rgb(34, 164, 213);;
+    text-align: center;
+ }
+ .menu a {
+     color: aqua;
+ }
+/* menu - fim */
+
+.painel {
+    background-color: #fff;
+}
+
+
+/* botões - inicio */
+.button{
+    color:rgb(34, 164, 213);
+    text-align: center;
+    text-decoration: bold;
+}
+.btn_fieb{
+    color:#fff;
+    background-color: rgb(34, 164, 213);
+    margin-bottom: 3em;
+    margin-inline: 1em;
+}
+/* botões - fim */
