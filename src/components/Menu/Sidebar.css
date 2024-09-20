@@ -1,8 +1,7 @@
 .sidebar{
     width: 200px;
     height: 100vh;
-    border: solid rgb(68, 0, 255) 1px;
-    border-radius: 10px;
+    background-color: rgb(200, 200, 255);
   }
   
   .sidebar a{
@@ -20,3 +19,11 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
   
+  .profile {
+    filter: invert(1);
+    height: 4em;
+  }
+
+  .nav-link {
+    color: #000;
+  }

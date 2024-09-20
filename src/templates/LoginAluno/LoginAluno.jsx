@@ -19,7 +19,7 @@ const Login = () => {
         <div className="container">
             <form action="" className="login-form">
                 <div className="login-logo">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo" className="logo-aluno"/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label mb-0 fw-bold">Email:</label>
@@ -40,7 +40,7 @@ const Login = () => {
                     </p>
                 </div>
                 <div className="d-flex justify-content-around mb-3 mt-2">
-                    <button className="btn btn-warning fw-medium shadow" type="button"
+                    <button className="btn btn-danger fw-medium shadow" type="button"
                         onClick={backto}>Cancelar</button>
                     <button className="btn btn-success fw-medium shadow" type="submit"
                         onClick={goto} >Entrar</button>

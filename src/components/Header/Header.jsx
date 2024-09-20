@@ -1,6 +1,6 @@
 import React from "react"
 
-// import logo from 'caminho da logo'
+import logo from '../../assets/images/logo.png'
 
 import { Link } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ function Header() {
 <header>
   <nav className="navbar navbar-expand-lg menu">
     <div className="container-fluid justify-content-center">
-      <a className="navbar-brand" href="#">Navbar</a>
+      <a className="navbar-brand" href="https://fieb.edu.br"><img src={logo} alt="fieb" className="logo"/></a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -21,10 +21,10 @@ function Header() {
             <Link to={'/'} className="nav-link">Início</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Produtos</a>
+            <a className="nav-link" href="#">Sobre Nós</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Quem Somos</a>
+            <a className="nav-link" href="#">Serviços</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Fale Conosco</a>

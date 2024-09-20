@@ -19,7 +19,7 @@ const ForgotPass = () => {
         <div className="container">
             <form action="" className="login-form">
                 <div className="login-logo">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo" className="logo-admin"/>
                 </div>
                 <h5 className="text-center">Recuperação de Senha</h5>
                 <div className="my-3">

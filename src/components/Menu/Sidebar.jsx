@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 import './Sidebar.css';
-import logo from '../../assets/images/system-logo_24_x_24.png';
+import profile from '../../assets/images/social/profile.svg';
 
 const Sidebar = () => {
 
     return (
         <div className="sidebar">
             <div className="d-flex justify-content-around align-items-center px-2 py-4 border-bottom rounded">
-                <img src={logo} alt="logo" className="m-1" />
-                <span className="fw-bold fst-italic">Fulano de Tal</span>
+                <img src={profile} alt="profile" className="profile" />
+                <span className="fw-bold fst-italic">Seja Bem vindo(a), Sílvia</span>
             </div>
 
             <nav className="nav flex-column">
                 <Link className="nav-link" aria-current="page" to={'/home'}>Dashboard</Link>
-                <Link className="nav-link" to={'/mensagem'}>Mensagem</Link>
-                <Link className="nav-link" to={'/usuario'}>Usuário</Link>
+                <Link className="nav-link" to={'/mensagem'}>Avaliações</Link>
+                <Link className="nav-link" to={'/usuario'}>Passeios</Link>
+                <Link className="nav-link" to={'/usuario'}>Minha Conta</Link>
             </nav>
         </div>
     )

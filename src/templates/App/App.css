@@ -2,6 +2,12 @@
     text-decoration: dashed;
 }
 
+.logo {
+    filter:invert(1);
+    height: 4em;
+    text-align: left;
+}
+
 .title1 {
     font-weight: bold;
     padding-bottom: 1em;

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from '../../assets/images/system-logo_128_x_128.png';
+import logo from '../../assets/images/logo.png';
 import './LoginAluno.css';
 
 const ForgotPass = () => {
@@ -19,7 +19,7 @@ const ForgotPass = () => {
         <div className="container">
             <form action="" className="login-form">
                 <div className="login-logo">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo" className="logo-aluno"/>
                 </div>
                 <h5 className="text-center">Recuperação de Senha</h5>
                 <div className="my-3">
