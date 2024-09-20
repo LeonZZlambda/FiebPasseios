@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Header from "../../components/Header/Header"
 import Sidebar from '../../components/Menu/Sidebar'
 
 const Home = () => {
@@ -8,7 +7,25 @@ const Home = () => {
         <div className="d-flex">
            <Sidebar />
            <div className="p-3 w-100">
-                <h2>Conteúdo Home</h2>
+                <nav className="fieb-logo">
+                    <h1>Hora de passear!</h1>
+                    <h3>Passeios Disponíveis:</h3>
+
+                    {/* slide de imagens com link*/}
+                    <br />
+
+                    <h1>Em breve...</h1>
+                    <h3>Futuros Passeios:</h3>
+
+                    {/* slide de imagens com link*/}
+                    <br />
+
+                    <h1>Para avaliar</h1>
+                    <h3>Avalie seus passeios anteriores:</h3>
+
+                    {/* slide de imagens com link */}
+                    <br />
+                </nav>
            </div>
         </div>
     )

@@ -7,7 +7,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const goto = () => {
-        navigate("/homeAdmin");
+        navigate("/HomeAdmin");
     }
 
     const backto = () => {
