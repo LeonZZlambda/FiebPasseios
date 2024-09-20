@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AvaliacoesAluno() {
+function Servicos() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function AvaliacoesAluno() {
   )
 }
 
-export default AvaliacoesAluno
+export default Servicos
