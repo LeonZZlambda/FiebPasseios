@@ -15,8 +15,7 @@
 }
 
 .logo-aluno {
-  filter: invert(1);
-  background-color: #000;
+  background-color: #fff;
   border-radius: 100%;
 
   border-radius: 20px;
