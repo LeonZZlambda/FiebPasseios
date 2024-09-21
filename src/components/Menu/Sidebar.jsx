@@ -8,7 +8,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="d-flex justify-content-around align-items-center px-2 py-4 border-bottom rounded">
                 <img src={profile} alt="profile" className="profile" />
-                <span className="fw-bold fst-italic">Seja Bem vindo(a), Sílvia</span>
+                <span className="fw-bold fst-italic"><h1 className="nav-link">Seja Bem vindo(a), Sílvia</h1></span>
             </div>
 
             <nav className="nav flex-column">

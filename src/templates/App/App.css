@@ -1,40 +1,37 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .name{
     text-decoration: dashed;
 }
 
+
+/* Header - inicio */
 .logo {
-    filter:invert(1);
-    height: 4em;
-    text-align: left;
+    height: 2em;
+}
+nav .menu {
+    background-color: #4D8EB2 !important;
 }
 
-.title1 {
-    font-weight: bold;
-    padding-bottom: 1em;
-    text-shadow: 2px 2px aqua;
+.navbar-nav .nav-link {
+    margin-left: 20px; 
+    color: white;
+    font-weight: 600;
 }
-.title2 {
-    padding-bottom: 2em;
-}
-
-body{
-    background-color: aqua;
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
 }
 
-.fieb-logo{
-    text-align: center;
-    color:rgb(34, 164, 213);
-    box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px;
-    background-color: #fff;
-    border-radius: 2em;
-    margin: 15px;
-    margin-inline: 10%;
-    height: 100zh;
+.btn-primary {
+    background-color: #0056b3; /* Cor do botão */
 }
+/* Header - fim */
+
 
 /* footer - inicio */
 footer{
-    background-image: linear-gradient(to bottom, darkblue, red);
+    background-image: linear-gradient(to bottom, #4D8EB2, #aaa);
     padding: 10px;
     text-align: center;
 }
@@ -75,9 +72,10 @@ footer{
 }
 /* footer - fim */
 
+
 /* menu - inicio*/
 .menu{
-    background-color: rgb(34, 164, 213);;
+    background-color: #4D8EB2;
     text-align: center;
  }
  .menu a {
@@ -92,14 +90,39 @@ footer{
 
 /* botões - inicio */
 .button{
-    color:rgb(34, 164, 213);
+    color: #4D8EB2;
     text-align: center;
     text-decoration: bold;
 }
 .btn_fieb{
     color:#fff;
-    background-color: rgb(34, 164, 213);
+    background-color: #4D8EB2;
     margin-bottom: 3em;
     margin-inline: 1em;
 }
 /* botões - fim */
+
+
+.title1 {
+    font-weight: bold;
+    padding-bottom: 1em;
+    text-shadow: 2px 2px aqua;
+}
+.title2 {
+    padding-bottom: 2em;
+}
+
+body{
+    background-color: #D9D9D9;
+}
+
+.fieb-logo{
+    text-align: center;
+    color:rgb(34, 164, 213);
+    box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px;
+    background-color: #fff;
+    border-radius: 2em;
+    margin: 15px;
+    margin-inline: 10%;
+    height: 100zh;
+}

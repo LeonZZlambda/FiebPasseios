@@ -12,12 +12,11 @@ function App() {
 
       <nav className='fieb-logo'>
               <img src={home} alt="fieb" />
-              <h2 className='title1'>Bem-vindo(a) <br />
-              à FIEB Passeios</h2>
+              <h2 className='title1'>Seja Bem-vindo(a) <br />
+              à FIEB TOURS EDUCATIVOS</h2>
           <div>
               <h4 className='title2'>Selecione uma opção de login:</h4>
-              <Link to={'/loginAluno'}><button className="btn btn_fieb fw-medium shadow" typ="button" onCLick >#SouAluno</button> </Link>
-              <Link to={'/loginAdmin'}><button className="btn btn_fieb fw-medium shadow" typ="button" onCLick >#SouAdmin</button> </Link>
+              <Link to={'/login'}><button className="btn btn_fieb fw-medium shadow" typ="button" onCLick >#SouAdmin</button> </Link>
           </div>
         </nav>
 

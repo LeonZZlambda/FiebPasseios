@@ -6,11 +6,8 @@ import Footer from '../components/Footer/Footer'
 import App from "../templates/App/App"
 import Home from "../templates/Home/Home"
 
-import ForgotPassAluno from "../templates/LoginAluno/ForgotPassAluno"
-import LoginAluno from "../templates/LoginAluno/LoginAluno"
-
-import ForgotPassAdmin from "../templates/LoginAdmin/ForgotPassAdmin"
-import LoginAdmin from "../templates/LoginAdmin/LoginAdmin"
+import ForgotPass from "../templates/Login/ForgotPass"
+import Login from "../templates/Login/Login"
 
 import Mensagem from "../templates/Mensagem/Mensagem"
 import MensagemLer from "../templates/Mensagem/MensagemLer"
@@ -29,12 +26,9 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
-        
-        <Route path="/loginAluno" element={<LoginAluno />} />
-        <Route path="/forgotpass" element={<ForgotPassAluno />} />
 
-        <Route path="/loginAdmin" element={<LoginAdmin />}  />
-        <Route path="/forgotpassAdmin" element={<ForgotPassAdmin />} />
+        <Route path="/login" element={<Login />}  />
+        <Route path="/forgotpass" element={<ForgotPass />} />
 
         <Route path="/mensagem" element={<Mensagem />} />
         <Route path="/mensagemler" element={<MensagemLer />} />

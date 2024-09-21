@@ -18,7 +18,6 @@ function Footer() {
                   <ul>
                     <li className="lista-footer"><a className="link-footer" href="#">Quem Somos</a></li>
                     <li className="lista-footer"><a className="link-footer" href="#">Nossa Equipe</a></li>
-                    <li className="lista-footer"><a className="link-footer" href="#">Nossa Ideia</a></li>
                     <li className="lista-footer"><a className="link-footer" href="#">Nossos Objetivos</a></li>
                     <li className="lista-footer"><a className="link-footer" href="#">Parcerias</a></li>
                   </ul>
@@ -33,7 +32,6 @@ function Footer() {
                     <li className="lista-footer"><a className="link-footer" href="#">Histórico de Passeios</a></li>
                     <li className="lista-footer"><a className="link-footer" href="#">Futuros Passeios</a></li>
                     <li className="lista-footer"><a className="link-footer" href="#">Passeios Ativos</a></li>
-                    <li className="lista-footer"><a className="link-footer" href="#">Sugestão de viagens</a></li>
                   </ul>
                 </div>
               </div>
@@ -46,7 +44,7 @@ function Footer() {
             <div className="row">
               <div className="col-12 text-center"> {/* Centraliza o texto */}
                 {/* Copyright Area */} 
-                <div className="copyright">&copy; 2024 FIEB Passeios. Todos os direitos reservados</div> 
+                <div className="copyright">&copy; 2024 FIEB TOURS EDUCATIVOS. Todos os direitos reservados</div> 
               </div>
             </div>
           </div>
