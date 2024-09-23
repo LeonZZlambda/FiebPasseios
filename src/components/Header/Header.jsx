@@ -2,6 +2,8 @@ import React from "react";
 import logo from '../../assets/images/fiebl.png';
 import { Link } from 'react-router-dom';
 
+import './Header.css';
+
 function Header() {
     return (
         <div>

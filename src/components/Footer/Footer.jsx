@@ -2,6 +2,8 @@ import React from 'react';
 
 import fiebtech from '../../assets/images/fiebtech.png';
 
+import './Footer.css';
+
 function Footer() {
   return (
     <div>

@@ -1,0 +1,25 @@
+.logo {
+    height: 2em;
+}
+/* menu - inicio*/
+.menu{
+    background-color: #4D8EB2;
+    text-align: center;
+ }
+ .menu a {
+     color: aqua;
+ }
+/* menu - fim */
+
+.navbar-nav .nav-link {
+    margin-left: 20px; 
+    color: white;
+    font-weight: 600;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+.btn-primary {
+    background-color: #0056b3; /* Cor do botão */
+}
