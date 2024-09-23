@@ -1,3 +1,89 @@
 .title-bold {
     font-weight: 900;
 }
+
+.fieb-logo .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.fieb-logo .carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.fieb-logo .carousel .item {
+    background-color: #f0f0f0;
+    margin: 10px;
+    padding: 10px;
+    width: 280px;
+    height: 480px;
+    border-radius: 16px;
+}
+
+.fieb-logo .carousel .item .image img{
+    width: 16em;
+    height: 12em;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.fieb-logo .carousel .item .info {
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Span - inicio */
+.fieb-logo .carousel .item .info span {
+    display: block;
+    text-align: center;
+    color: #1e1e1e;
+    padding: 5px;
+    border-radius: 10px;
+}
+.fieb-logo .carousel .item .info .name {
+    color: #0056b3;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+a{
+    font-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.fieb-logo .carousel .item .info .quant{
+    flex-grow: 1;
+}
+.fieb-logo .carousel .item .info .price{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.fieb-logo .carousel .item .info .view{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0056b3;
+}
+
+
+
+.fieb-logo .buttons {
+    text-align: center;
+}
+.fieb-logo .buttons img {
+    height: 3em;
+}
+.fieb-logo .buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.fieb-logo .buttons button:first-child img{
+    transform: rotate(180deg);
+}

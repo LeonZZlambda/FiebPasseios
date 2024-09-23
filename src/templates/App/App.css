@@ -1,6 +1,16 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #D9D9D9;
+}
+
 .name{
     text-decoration: dashed;
 }
@@ -10,9 +20,15 @@
 .logo {
     height: 2em;
 }
-nav .menu {
-    background-color: #4D8EB2 !important;
-}
+/* menu - inicio*/
+.menu{
+    background-color: #4D8EB2;
+    text-align: center;
+ }
+ .menu a {
+     color: aqua;
+ }
+/* menu - fim */
 
 .navbar-nav .nav-link {
     margin-left: 20px; 
@@ -72,17 +88,6 @@ footer{
 }
 /* footer - fim */
 
-
-/* menu - inicio*/
-.menu{
-    background-color: #4D8EB2;
-    text-align: center;
- }
- .menu a {
-     color: aqua;
- }
-/* menu - fim */
-
 .painel {
     background-color: #fff;
 }
@@ -110,10 +115,6 @@ footer{
 }
 .title2 {
     padding-bottom: 2em;
-}
-
-body{
-    background-color: #D9D9D9;
 }
 
 .fieb-logo{

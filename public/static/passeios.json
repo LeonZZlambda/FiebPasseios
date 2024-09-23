@@ -1,0 +1,81 @@
+[
+    {
+        "id":    "123",
+        "name":  "Hopi Hari",
+        "quant": 150,
+        "price": 200.00,
+        "unitd": "Toda a FIEB",
+        "local": "Rod. dos Bandeirantes, km 72, Vinhedo - SP, 13288-390",
+        "image": "https://www.guarulhoshoje.com.br/wp-content/uploads/2020/09/hopihari910x608.jpg"
+    },
+    
+    {
+        "id":    "124",
+        "name":  "Bairro da Liberdade",
+        "quant": 60,
+        "price": 60.00,
+        "unitd": "ITB Brasílio Flores",
+        "local": "R. dos Estudantes, 15 - Sé, São Paulo - SP, 01506-030",
+        "image": "https://www.tanaminharota.com.br/wp-content/uploads/2019/04/O-que-fazer-no-bairro-da-Liberdade-em-S%C3%A3o-Paulo-portal.jpg"
+    },
+
+    {
+        "id":    "125",
+        "name":  "MASP",
+        "quant": 15,
+        "price": 60.00,
+        "unitd": "ITB Brasílio Flores",
+        "local": "Av. Paulista, 1578 - Bela Vista, São Paulo - SP, 01310-200",
+        "image": "https://1.bp.blogspot.com/-7iibTYnyatk/W-XGy5ltj8I/AAAAAAAANO8/bNF2DOfnDx0htFSP1w4tbXTHlOE-UnAoQCLcBGAs/s1600/MASP%2B3.jpeg"
+    },
+
+    {
+        "id":    "126",
+        "name":  "Museu da Favela",
+        "quant": 15,
+        "price": 15.00,
+        "unitd": "ITB Maria Theodora",
+        "local": "Av. Rio Branco, 1269 - Campos Elíseos, São Paulo - SP, 01205-903",
+        "image": "https://live.staticflickr.com/65535/52772991440_a2342d3a69_b.jpg"
+    },
+
+    {
+        "id":    "127",
+        "name":  "Museu Japoneses",
+        "quant": 60,
+        "price": 20.00,
+        "unitd": "ITB Maria Shalupp",
+        "local": "R. São Joaquim, 381 - Liberdade, São Paulo - SP, 01508-900",
+        "image": "https://www.refugiosnointerior.com.br/sistema/_lib/file/img/lugar/5818/museu_historico_da_imigracao_japonesa.jpg"
+    },
+
+    {
+        "id":    "128",
+        "name":  "Museu de Barueri",
+        "quant": 60,
+        "price": 0.00,
+        "unitd": "ITB Brasílio Flores",
+        "local": "Av. Henrique Gonçalves, 359 - Jd Belval, Barueri - SP, 06420-130",
+        "image": "https://vivadigitalsa.com.br/wp-content/uploads/2023/01/11-01-2023-museu-municipal-comeca-a-ser-restaurado-1.jpg"
+    },
+
+    {
+        "id":    "129",
+        "name":  "IME - USP",
+        "quant": 300,
+        "price": 0.00,
+        "unitd": "Toda a FIEB",
+        "local": "R. do Matão, 1010 - Butantã, São Paulo - SP, 05508-090",
+        "image": "https://www.ime.usp.br/media/crusp.jpg"
+    },
+
+    {
+        "id":    "131",
+        "name":  "Zoológico de São Paulo",
+        "quant": 300,
+        "price": 75.00,
+        "unitd": "Toda a FIEB",
+        "local": "Av. Miguel Estefano, 4241 - Água Funda, São Paulo - SP, 04301-905",
+        "image": "https://www.viajali.com.br/wp-content/uploads/2022/08/zoologico-de-sao-paulo-00.jpg"
+    }
+]
