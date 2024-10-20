@@ -32,7 +32,7 @@ const ProjectForm = () => {
                 <h4 className="text">Imagem do passeio: 
                     <input type="file" accept="image/*" required />
                 </h4>
-                <div className="submit-container">
+                <div className="submit-container b">
                     <input type="submit" value="Criar passeio" />
                 </div>
             </form>

@@ -1,5 +1,3 @@
-/* Já está no código */
-/* Formatação principal */
 .form-container {
     display: flex;
     justify-content: center;
@@ -11,27 +9,22 @@
     width: 100%;
     max-width: 600px;
     padding: 20px;
-    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 15px;
 }
 
 .text input, .text select {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ced4da;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Container de envio */
 .submit-container {
     display: flex;
     justify-content: center;
@@ -46,13 +39,13 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .submit-container input:hover {
     background-color: #0056b3;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .project-form {
         padding: 15px;
@@ -61,7 +54,7 @@
 
 @media (max-width: 480px) {
     .project-form {
-        padding: 10px; /* Reduzindo o padding para telas muito pequenas */
+        padding: 10px;
     }
 
     .text {
@@ -69,12 +62,12 @@
     }
 
     .text input, .text select {
-        padding: 8px; /* Menor padding para inputs */
-        font-size: 14px; /* Diminuindo o tamanho da fonte */
+        padding: 8px;
+        font-size: 14px;
     }
 
     .submit-container input {
-        width: 100%; /* O botão de submit ocupará toda a largura em telas pequenas */
-        font-size: 14px; /* Menor tamanho para o botão */
+        width: 100%;
+        font-size: 14px;
     }
 }

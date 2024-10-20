@@ -14,20 +14,19 @@ const ForgotPass = () => {
         navigate("/");
     }
 
-
     return (
         <div className="container">
             <form action="" className="login-form">
                 <div className="login-logo">
                     <img src={logo} alt="logo" className="fieb-login"/>
                 </div>
-                <h5 className="text-center">Recuperação de Senha</h5>
+                <h4 className="text-center ">Recuperação de Senha</h4>
                 <div className="my-3">
                     <label htmlFor="email" className="form-label mb-0 fw-bold">Email:</label>
-                    <input type="email" id="email" className="form-control text-center fw-medium shadow" />
+                    <input type="email" id="email" className="form-control text-center fw-medium shadow" required />
                 </div>
                 <div className="d-flex flex-row-reverse mt-1">
-                    <p className="fw-bold fst-italic opacity-75 me-1">Acessar o sistema:
+                    <p className="fw-bold fst-italic opacity-75 me-1">Lembrou da senha?
                         <Link to={'/login'}> Clique aqui.</Link>
                     </p>
                 </div>
@@ -47,4 +46,4 @@ const ForgotPass = () => {
     )
 }
 
-export default ForgotPass
+export default ForgotPass;
