@@ -17,6 +17,8 @@ import UsuarioEditar from "../templates/Usuario/UsuarioEditar"
 import UsuarioNovo from "../templates/Usuario/UsuarioNovo"
 import UsuariosLista from "../templates/Usuario/UsuariosLista"
 
+import CriarPasseio from '../templates/CriarPasseio/CriarPasseio'
+
 import NotFound from "../templates/NotFound/NotFound"
 
 const AppRoutes = () => {
@@ -28,16 +30,18 @@ const AppRoutes = () => {
         <Route path="/home" element={<Home />} />
 
         <Route path="/login" element={<Login />}  />
-        <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/forgotPass" element={<ForgotPass />} />
 
         <Route path="/mensagem" element={<Mensagem />} />
-        <Route path="/mensagemler" element={<MensagemLer />} />
+        <Route path="/mensagemLer" element={<MensagemLer />} />
 
 
         <Route path="/usuario" element={<Usuario />} />
         <Route path="/usuarioslista" element={<UsuariosLista />} />
         <Route path="/usuarionovo" element={<UsuarioNovo />} />
         <Route path="/usuarioeditar/:id" element={<UsuarioEditar />} />
+
+        <Route path="/criarPasseio" element={<CriarPasseio />} />
 
         <Route path='*' element ={<NotFound/>} />
 

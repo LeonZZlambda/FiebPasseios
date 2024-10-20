@@ -13,6 +13,7 @@ const Sidebar = () => {
 
             <nav className="nav flex-column">
                 <Link className="nav-link" aria-current="page" to={'/home'}>Dashboard</Link>
+                <Link className="nav-link" to={'/criarPasseio'}>Criar Passeio</Link>
                 <Link className="nav-link" to={'/mensagem'}>Avaliações</Link>
                 <Link className="nav-link" to={'/usuario'}>Passeios</Link>
                 <Link className="nav-link" to={'/usuario'}>Minha Conta</Link>

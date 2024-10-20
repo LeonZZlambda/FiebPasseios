@@ -22,13 +22,13 @@ function Header() {
                                     <Link to={'/'} className="nav-link">Início</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Sobre Nós</a>
+                                    <Link to={'/'}className="nav-link">Sobre Nós</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Serviços</a>
+                                    <Link to={'/Home'}className="nav-link">Serviços</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="btn btn-primary rounded-pill nav-link" href="#">Fazer Login</a>
+                                    <Link to={'/Login'}className="btn btn-primary rounded-pill nav-link" href="#">Fazer Login</Link>
                                 </li>
                             </ul>
                         </div>

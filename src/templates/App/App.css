@@ -54,3 +54,15 @@ body {
     margin-inline: 10%;
     height: 100zh;
 }
+
+.fieb-logo-menu{
+    text-align: center;
+    color:rgb(34, 164, 213);
+    box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px;
+    background-color: #fff;
+    border-radius: 2em;
+    margin: 15px;
+    margin-inline: 10%;
+    margin-left: 0%;
+    height: 100zh;
+}

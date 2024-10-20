@@ -2,33 +2,33 @@
     font-weight: 900;
 }
 
-.fieb-logo .carousel {
+.fieb-logo-menu .carousel {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
 }
 
-.fieb-logo .carousel::-webkit-scrollbar{
+.fieb-logo-menu .carousel::-webkit-scrollbar{
     display: none;
 }
 
-.fieb-logo .carousel .item {
+.fieb-logo-menu .carousel .item {
     background-color: #f0f0f0;
     margin: 10px;
     padding: 10px;
     width: 280px;
-    height: 495px;
+    height: 515px;
     border-radius: 16px;
 }
 
-.fieb-logo .carousel .item .image img{
+.fieb-logo-menu .carousel .item .image img{
     width: 16em;
     height: 12em;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.fieb-logo .carousel .item .info {
+.fieb-logo-menu .carousel .item .info {
     height: 5em;
     display: flex;
     flex-direction: column;
@@ -36,35 +36,35 @@
 }
 
 /* Span - inicio */
-.fieb-logo .carousel .item .info span {
+.fieb-logo-menu .carousel .item .info span {
     display: block;
     text-align: center;
     color: #1e1e1e;
     padding: 5px;
     border-radius: 10px;
 }
-.fieb-logo .carousel .item .info .name {
+.fieb-logo-menu .carousel .item .info .name {
     color: #0056b3;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.fieb-logo .carousel .item .info a{
+.fieb-logo-menu .carousel .item .info a{
     font-style: none;
     text-decoration: none;
     font-weight: 700;
     color: inherit;
 }
 
-.fieb-logo .carousel .item .info .quant{
+.fieb-logo-menu .carousel .item .info .quant{
     flex-grow: 1;
 }
-.fieb-logo .carousel .item .info .price{
+.fieb-logo-menu .carousel .item .info .price{
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: bold;
 }
-.fieb-logo .carousel .item .info .view{
+.fieb-logo-menu .carousel .item .info .view{
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -74,17 +74,17 @@
 
 
 
-.fieb-logo .buttons {
+.fieb-logo-menu .buttons {
     text-align: center;
 }
-.fieb-logo .buttons img {
+.fieb-logo-menu .buttons img {
     height: 3em;
 }
-.fieb-logo .buttons button {
+.fieb-logo-menu .buttons button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
-.fieb-logo .buttons button:first-child img{
+.fieb-logo-menu .buttons button:first-child img{
     transform: rotate(-180deg);
 }

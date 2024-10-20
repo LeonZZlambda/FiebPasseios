@@ -1,28 +1,71 @@
-.sidebar{
-    width: 160px;
-    height: 170vh;
-    background-color: #447f9e;
-  }
-  
-  .sidebar a{
-    padding: 20px 10px;
-  }
-  
-  .sidebar a:hover {
-    font-size: 18px;
-    font-weight: bold;
-    border: solid #fff 1px;
-    background-color: #b9ebff;
-    text-align: center;
-    margin: 2px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
-  
-  .profile {
-    filter: invert(1);
-    height: 4em;
+.sidebar {
+  width: 140px;
+  height: auto;
+  background-color: #447f9e;
+  transition: width 0.3s ease;
+}
+
+.sidebar a {
+  padding: 20px 10px;
+}
+
+.sidebar a:hover {
+  font-size: 18px;
+  font-weight: bold;
+  border: solid #fff 1px;
+  background-color: #b9ebff;
+  text-align: center;
+  margin: 2px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.profile {
+  filter: invert(1);
+  height: 4em;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 80px;
   }
 
-  .nav-link {
-    color: #fff;
+
+
+  .sidebar a {
+      padding: 10px 5px;
+      font-size: 12px; 
   }
+
+  .sidebar a:hover {
+      font-size: 14px;
+  }
+
+  .profile {
+      height: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 60px;
+  }
+
+  .sidebar a {
+      padding: 8px 3px;
+      font-size: 10px;
+      text-align: center;
+  }
+
+  .sidebar a:hover {
+      font-size: 12px;
+  }
+
+  .profile {
+      height: 2em;
+  }
+}
