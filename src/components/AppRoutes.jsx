@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer'
 
 import App from "../templates/App/App"
 import Home from "../templates/Home/Home"
+import SobreNos from "../templates/Z_Extra/SobreNos/SobreNos"
 
 import ForgotPass from "../templates/Login/ForgotPass"
 import Login from "../templates/Login/Login"
@@ -28,6 +29,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/aboutUs" element={<SobreNos />} />
 
         <Route path="/login" element={<Login />}  />
         <Route path="/forgotPass" element={<ForgotPass />} />

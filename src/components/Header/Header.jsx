@@ -22,7 +22,7 @@ function Header() {
                                     <Link to={'/'} className="nav-link">Início</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/'}className="nav-link">Sobre Nós</Link>
+                                    <Link to={'/aboutUs'}className="nav-link">Sobre Nós</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to={'/Home'}className="nav-link">Serviços</Link>
