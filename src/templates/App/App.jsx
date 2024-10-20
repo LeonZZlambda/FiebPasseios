@@ -16,7 +16,7 @@ function App() {
               à FIEB TOURS EDUCATIVOS</h2>
           <div>
               <h4 className='title2'>Selecione uma opção de login:</h4>
-              <Link to={'/login'}><button className="btn btn_fieb fw-medium shadow" type="button" onCLick >#SouAdmin</button> </Link>
+              <Link to={'/login'}><button className="btn fw-medium shadow-sm btn_fieb" type="button" onCLick >#SouAdmin</button> </Link>
           </div>
         </nav>
 
@@ -24,4 +24,4 @@ function App() {
   ) 
 }
 
-export default App
+export default App;

@@ -47,7 +47,7 @@ function SobreNos() {
               Pronto para organizar o próximo passeio educacional? Clique no botão abaixo e comece a usar o FiebPasseios.
             </p>
 
-            <Link to='/home' className='btn fw-medium btn-lg shadow-sm btn_fieb'>
+            <Link to='/' className='btn fw-medium btn-lg shadow-sm btn_fieb'>
               Acessar FiebPasseios
             </Link>
           </section>
