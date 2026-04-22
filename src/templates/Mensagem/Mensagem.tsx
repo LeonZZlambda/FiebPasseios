@@ -1,9 +1,10 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
 
-const Mensagem = () => {
+export default function Mensagem(): JSX.Element {
   const navigate = useNavigate();
 
   const goTo = () => {
@@ -48,6 +49,4 @@ const Mensagem = () => {
       </div>
     </div>
   );
-};
-
-export default Mensagem;
+}

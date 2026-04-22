@@ -1,16 +1,20 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, FC } from 'react';
 import './ImageUploader.css';
 
-const ImageUploader = ({ setFile }) => {
-  const [currentFile, setCurrentFile] = useState(undefined);
-  const [previewImage, setPreviewImage] = useState(undefined);
+interface ImageUploaderProps {
+  setFile: (file?: File | undefined) => void;
+}
 
-  const selectFile = (event) => {
-    const currentFile = event.target.files[0];
-    const previewImage = URL.createObjectURL(event.target.files[0]);
-    setCurrentFile(currentFile);
-    setPreviewImage(previewImage);
+const ImageUploader: FC<ImageUploaderProps> = ({ setFile }) => {
+  const [currentFile, setCurrentFile] = useState<File | undefined>(undefined);
+  const [previewImage, setPreviewImage] = useState<string | undefined>(undefined);
+
+  const selectFile = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event?.target?.files && event.target.files[0];
+    if (!file) return;
+    const preview = URL.createObjectURL(file);
+    setCurrentFile(file);
+    setPreviewImage(preview);
   };
 
   useEffect(() => {
@@ -52,7 +56,3 @@ const ImageUploader = ({ setFile }) => {
 };
 
 export default ImageUploader;
-
-ImageUploader.propTypes = {
-  setFile: PropTypes.func.isRequired,
-};

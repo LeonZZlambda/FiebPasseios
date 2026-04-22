@@ -1,15 +1,10 @@
-import {} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 
 import home from '../../assets/images/logo.png';
 
-/**
- * Entrada da aplicação — landing e seleção de login.
- *
- * @returns {any} Elemento principal da aplicação
- */
-function App() {
+export default function App(): JSX.Element {
   return (
     <div className="container">
       <nav className="fieb-logo">
@@ -29,5 +24,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

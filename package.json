@@ -13,6 +13,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx,css,md,json}\"",
     "lint:fix": "eslint . --ext js,jsx --fix",
     "test": "vitest",
+    "typecheck": "tsc --noEmit",
     "test:watch": "vitest --watch",
     "ci": "npm run lint && npm run test && npm run build",
     "prepare": "husky install"
@@ -35,6 +36,10 @@
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^20.6.3",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",

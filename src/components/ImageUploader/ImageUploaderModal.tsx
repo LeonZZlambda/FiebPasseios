@@ -1,16 +1,22 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, FC } from 'react';
 import './ImageUploader.css';
 
-const ImageUploaderModal = ({ setFile, setImage, chosenImage }) => {
-  const [currentFile, setCurrentFile] = useState(undefined);
-  const [previewImage, setPreviewImage] = useState(undefined);
+interface ImageUploaderModalProps {
+  setFile: (file?: File | undefined) => void;
+  setImage: (image?: string | undefined) => void;
+  chosenImage?: string | undefined;
+}
 
-  const selectFile = (event) => {
-    const currentFile = event.target.files[0];
-    const previewImage = URL.createObjectURL(event.target.files[0]);
-    setCurrentFile(currentFile);
-    setPreviewImage(previewImage);
+const ImageUploaderModal: FC<ImageUploaderModalProps> = ({ setFile, setImage, chosenImage }) => {
+  const [currentFile, setCurrentFile] = useState<File | undefined>(undefined);
+  const [previewImage, setPreviewImage] = useState<string | undefined>(undefined);
+
+  const selectFile = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event?.target?.files && event.target.files[0];
+    if (!file) return;
+    const preview = URL.createObjectURL(file);
+    setCurrentFile(file);
+    setPreviewImage(preview);
   };
 
   useEffect(() => {
@@ -40,7 +46,7 @@ const ImageUploaderModal = ({ setFile, setImage, chosenImage }) => {
       <div
         className="modal fade"
         id="imageModal"
-        tabIndex="-1"
+        tabIndex={-1}
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -126,9 +132,3 @@ const ImageUploaderModal = ({ setFile, setImage, chosenImage }) => {
 };
 
 export default ImageUploaderModal;
-
-ImageUploaderModal.propTypes = {
-  setFile: PropTypes.func.isRequired,
-  setImage: PropTypes.func.isRequired,
-  chosenImage: PropTypes.string,
-};

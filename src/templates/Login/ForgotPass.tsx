@@ -1,8 +1,9 @@
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/fiebl.png';
 import './Login.css';
 
-const ForgotPass = () => {
+export default function ForgotPass(): JSX.Element {
   const navigate = useNavigate();
 
   const goto = () => {
@@ -51,6 +52,4 @@ const ForgotPass = () => {
       </form>
     </div>
   );
-};
-
-export default ForgotPass;
+}

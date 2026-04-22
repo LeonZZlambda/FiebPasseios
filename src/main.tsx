@@ -1,16 +1,16 @@
 /**
- * Entry point: monta a aplicação React e configura o roteamento.
- *
- * @file
+ * Entry point: monta a aplicação React e configura o roteamento. (TypeScript)
  */
 import '../node_modules/bootstrap/dist/js/bootstrap.js';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from './components/AppRoutes.jsx';
+import AppRoutes from './components/AppRoutes';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root') as HTMLElement;
+
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <BrowserRouter>
       <AppRoutes />

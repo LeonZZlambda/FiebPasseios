@@ -1,8 +1,9 @@
+import React from 'react';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
 
-const MensagemLer = () => {
+export default function MensagemLer(): JSX.Element {
   return (
     <div className="d-flex">
       <Sidebar />
@@ -69,6 +70,4 @@ const MensagemLer = () => {
       </div>
     </div>
   );
-};
-
-export default MensagemLer;
+}

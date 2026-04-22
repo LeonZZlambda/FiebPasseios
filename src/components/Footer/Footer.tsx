@@ -2,12 +2,7 @@ import fiebtech from '../../assets/images/fiebtech.png';
 
 import './Footer.css';
 
-/**
- * Footer do site — informações institucionais e links.
- *
- * @returns {any} Elemento de rodapé renderizado
- */
-function Footer() {
+export default function Footer(): JSX.Element {
   return (
     <div>
       <footer>
@@ -83,9 +78,7 @@ function Footer() {
             <div className="row">
               <div className="col-12 text-center">
                 {/* Copyright Area */}
-                <div className="copyright">
-                  &copy; 2024 FIEB TOURS EDUCATIVOS. Todos os direitos reservados
-                </div>
+                <div className="copyright">&copy; 2024 FIEB TOURS EDUCATIVOS. Todos os direitos reservados</div>
               </div>
             </div>
           </div>
@@ -94,5 +87,3 @@ function Footer() {
     </div>
   );
 }
-
-export default Footer;

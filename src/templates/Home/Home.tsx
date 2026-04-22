@@ -1,19 +1,14 @@
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../../components/Menu/Sidebar';
 
 import './Home.css';
 
 import chevron from '../../assets/images/chevron.png';
-import { useEffect, useState, useRef } from 'react';
 
-/**
- * Página principal que lista passeios disponíveis.
- *
- * @returns {any} Elemento da página Home
- */
-function Home() {
-  const [data, setData] = useState([]);
-  const carousel = useRef(null);
+export default function Home(): JSX.Element {
+  const [data, setData] = useState<any[]>([]);
+  const carousel = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     fetch('/static/passeios.json')
@@ -21,14 +16,18 @@ function Home() {
       .then(setData);
   }, []);
 
-  const handleLeftClick = (e) => {
+  const handleLeftClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    if (carousel.current) {
+      carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    }
   };
 
-  const handleRightClick = (e) => {
+  const handleRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
+    if (carousel.current) {
+      carousel.current.scrollLeft += carousel.current.offsetWidth;
+    }
   };
 
   return (
@@ -39,8 +38,8 @@ function Home() {
           <h1 className="title-bold">Passeios Disponíveis</h1>
           <h3>Passeios que estão em andamento e podem ser editados:</h3>
           <div className="carousel" ref={carousel}>
-            {data.map((item) => {
-              const { id, name, quant, price, unitd, local, data, image } = item;
+            {data.map((item: any) => {
+              const { id, name, quant, price, unitd, local, data: dateField, image } = item;
               return (
                 <div className="item" key={id}>
                   <div className="image">
@@ -51,7 +50,7 @@ function Home() {
                     <span className="quant">quant. de alunos: {quant}</span>
                     <span className="unitd">{unitd}</span>
                     <span className="locate">{local}</span>
-                    <span className="data">data: {data}</span>
+                    <span className="data">data: {dateField}</span>
                     <span className="price">preço: R${price}</span>
                     <span className="view">
                       <Link to="/editar">Editar</Link>
@@ -75,5 +74,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

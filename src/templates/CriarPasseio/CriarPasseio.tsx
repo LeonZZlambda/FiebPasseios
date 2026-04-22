@@ -1,7 +1,8 @@
+import React from 'react';
 import Sidebar from '../../components/Menu/Sidebar';
 import ProjectForm from '../../components/Project/ProjectForm';
 
-const CriarPasseio = () => {
+export default function CriarPasseio(): JSX.Element {
   return (
     <div className="d-flex">
       <Sidebar />
@@ -17,6 +18,4 @@ const CriarPasseio = () => {
       </div>
     </div>
   );
-};
-
-export default CriarPasseio;
+}

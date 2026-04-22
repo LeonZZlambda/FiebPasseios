@@ -1,16 +1,17 @@
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
-import { useEffect, useState } from 'react';
 import UsuarioService from '../../services/UsuarioService';
 
-const UsuarioEditar = () => {
-  const { id } = useParams();
+export default function UsuarioEditar(): JSX.Element {
+  const { id } = useParams() as { id?: string };
 
-  const [usuario, setUsuario] = useState([]);
+  const [usuario, setUsuario] = useState<any>({});
 
   useEffect(() => {
+    if (!id) return;
     UsuarioService.getById(id)
       .then((response) => {
         const usuario = response.data;
@@ -104,6 +105,4 @@ const UsuarioEditar = () => {
       </div>
     </div>
   );
-};
-
-export default UsuarioEditar;
+}

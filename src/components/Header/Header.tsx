@@ -1,21 +1,24 @@
-import logo from '../../assets/images/fiebl.png';
 import { Link } from 'react-router-dom';
+import logoDefault from '../../assets/images/fiebl.png';
 
 import './Header.css';
 
-/**
- * Header da aplicação — marca e navegação principal.
- *
- * @returns {any} Elemento de cabeçalho
- */
-function Header() {
+interface HeaderProps {
+  goto?: string;
+  title?: string;
+  logo?: string;
+}
+
+export default function Header({ goto, title, logo }: HeaderProps): JSX.Element {
+  const displayLogo = logo || logoDefault;
+
   return (
     <div>
       <header>
         <nav className="navbar navbar-expand-lg menu">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              <img src={logo} alt="fieb" className="logo" />
+              <img src={displayLogo} alt="fieb" className="logo" />
             </a>
             <button
               className="navbar-toggler"
@@ -46,7 +49,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={'/Login'} className="btn btn-primary rounded-pill nav-link" href="#">
+                  <Link to={'/Login'} className="btn btn-primary rounded-pill nav-link">
                     Fazer Login
                   </Link>
                 </li>
@@ -54,9 +57,21 @@ function Header() {
             </div>
           </div>
         </nav>
+
+        {title && (
+          <div className="header-title container py-2 d-flex justify-content-between align-items-center">
+            {goto ? (
+              <Link to={goto} className="btn btn-link">
+                Voltar
+              </Link>
+            ) : (
+              <div />
+            )}
+            <h2 className="m-0">{title}</h2>
+            <img src={displayLogo} alt="logo" className="logo-small" />
+          </div>
+        )}
       </header>
     </div>
   );
 }
-
-export default Header;

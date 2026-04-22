@@ -1,9 +1,10 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
 
-const Usuario = () => {
+export default function Usuario(): JSX.Element {
   return (
     <div className="d-flex">
       <Sidebar />
@@ -22,6 +23,4 @@ const Usuario = () => {
       </div>
     </div>
   );
-};
-
-export default Usuario;
+}

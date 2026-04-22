@@ -1,9 +1,7 @@
-/**
- * Formulário para criar/editar passeios.
- */
+import type { FC } from 'react';
 import './ProjectForm.css';
 
-const ProjectForm = () => {
+const ProjectForm: FC = () => {
   return (
     <div className="form-container">
       <form className="project-form">
@@ -17,8 +15,8 @@ const ProjectForm = () => {
         </h4>
         <h4 className="text">
           Unidade:
-          <select name="unitd" required>
-            <option disabled selected>
+          <select name="unitd" defaultValue="" required>
+            <option value="" disabled>
               Selecione qual Unidade está envolvida
             </option>
             <option>ITB Brasílio Flores - Jd. Belval</option>

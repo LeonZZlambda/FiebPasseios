@@ -6,22 +6,28 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:jsdoc/recommended',
+    'plugin:@typescript-eslint/recommended',
     'prettier'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'docs'],
+  parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module', ecmaFeatures: { jsx: true } },
   settings: { react: { version: 'detect' } },
-  plugins: ['react-refresh', 'jsdoc'],
+  plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
-    ],
-    'jsdoc/check-alignment': 'warn',
-    'jsdoc/check-param-names': 'warn',
-    'jsdoc/newline-after-description': 'warn',
-    'jsdoc/require-param': 'warn'
+    ]
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: { ecmaVersion: 'latest', sourceType: 'module', ecmaFeatures: { jsx: true } },
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended']
+    }
+  ],
 }

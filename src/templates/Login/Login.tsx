@@ -1,8 +1,9 @@
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import fiebWhite from '../../assets/images/fiebl.png';
 import './Login.css';
 
-const Login = () => {
+export default function Login(): JSX.Element {
   const navigate = useNavigate();
 
   const goto = () => {
@@ -61,6 +62,4 @@ const Login = () => {
       </form>
     </div>
   );
-};
-
-export default Login;
+}

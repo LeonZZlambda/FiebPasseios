@@ -1,8 +1,9 @@
+import React from 'react';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
 
-const UsuarioNovo = () => {
+export default function UsuarioNovo(): JSX.Element {
   return (
     <div className="d-flex">
       <Sidebar />
@@ -43,6 +44,4 @@ const UsuarioNovo = () => {
       </div>
     </div>
   );
-};
-
-export default UsuarioNovo;
+}

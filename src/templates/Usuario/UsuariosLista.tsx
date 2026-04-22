@@ -1,14 +1,14 @@
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
 import UsuarioService from '../../services/UsuarioService';
-import { useEffect, useState } from 'react';
 
-const UsuariosLista = () => {
+export default function UsuariosLista(): JSX.Element {
   const navigate = useNavigate();
 
-  const [usuarios, setUsuarios] = useState([]);
+  const [usuarios, setUsuarios] = useState<any[]>([]);
 
   useEffect(() => {
     UsuarioService.getAllUsuarios()
@@ -22,7 +22,7 @@ const UsuariosLista = () => {
       });
   }, []);
 
-  const getId = (id) => {
+  const getId = (id: string | number) => {
     navigate(`/usuarioeditar/` + id);
   };
 
@@ -46,7 +46,7 @@ const UsuariosLista = () => {
                 </tr>
               </thead>
               <tbody>
-                {usuarios?.map((usuario) => (
+                {usuarios?.map((usuario: any) => (
                   <tr className="" key={usuario.id}>
                     <td>{usuario.id}</td>
                     <td>{usuario.nome}</td>
@@ -71,6 +71,4 @@ const UsuariosLista = () => {
       </div>
     </div>
   );
-};
-
-export default UsuariosLista;
+}

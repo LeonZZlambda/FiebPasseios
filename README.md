@@ -35,6 +35,7 @@ Scripts úteis
 - `npm run preview` — pré-visualiza o build de produção
 - `npm run lint` — executa o ESLint configurado
 - `npm run docs` — gera a documentação JSDoc em `./docs` (requer `jsdoc` como devDependency)
+ - `npm run typecheck` — executa `tsc --noEmit` para verificação de tipos TypeScript
 
 Documentação (JSDoc)
 -

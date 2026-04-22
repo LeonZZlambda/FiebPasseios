@@ -1,11 +1,7 @@
+import React from 'react';
 import DeadLink from '../../assets/images/404.png';
 
-/**
- * Página 404 (Not Found).
- *
- * @returns {any} Elemento 404
- */
-function NotFound() {
+export default function NotFound(): JSX.Element {
   return (
     <div>
       <div className="fieb-logo">
@@ -16,5 +12,3 @@ function NotFound() {
     </div>
   );
 }
-
-export default NotFound;

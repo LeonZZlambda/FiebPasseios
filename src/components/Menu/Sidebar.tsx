@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './Sidebar.css';
 import profile from '../../assets/images/social/profile.svg';
 
-const Sidebar = () => {
+export default function Sidebar(): JSX.Element {
   return (
     <div className="sidebar">
       <div className="d-flex justify-content-around align-items-center px-2 py-4 border-bottom rounded">
@@ -31,6 +31,4 @@ const Sidebar = () => {
       </nav>
     </div>
   );
-};
-
-export default Sidebar;
+}

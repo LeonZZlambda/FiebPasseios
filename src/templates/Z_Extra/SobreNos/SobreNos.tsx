@@ -1,11 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-/**
- * Página "Sobre Nós" com descrição do projeto.
- *
- * @returns {any} Elemento da página Sobre Nós
- */
-function SobreNos() {
+export default function SobreNos(): JSX.Element {
   return (
     <nav className="fieb-logo justfy-content-center align-items-center min-vh-100 mt-5 p-4">
       <h1 className="title1 display-4 text-center mb-4">Bem-vindo(a) à FiebPasseios</h1>
@@ -60,5 +56,3 @@ function SobreNos() {
     </nav>
   );
 }
-
-export default SobreNos;
