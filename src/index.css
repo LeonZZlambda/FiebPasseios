@@ -2,6 +2,6 @@
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
 .table-wrapper {
-    max-height: 69vh; 
-    overflow-y: auto; 
+  max-height: 69vh;
+  overflow-y: auto;
 }

@@ -1,12 +1,13 @@
 /**
  * Entry point: monta a aplicação React e configura o roteamento.
+ *
  * @file
  */
 import '../node_modules/bootstrap/dist/js/bootstrap.js';
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './components/AppRoutes.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -14,5 +15,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <AppRoutes />
     </BrowserRouter>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

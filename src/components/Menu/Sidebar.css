@@ -31,41 +31,39 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .sidebar {
-      width: 80px;
+    width: 80px;
   }
 
-
-
   .sidebar a {
-      padding: 10px 5px;
-      font-size: 12px; 
+    padding: 10px 5px;
+    font-size: 12px;
   }
 
   .sidebar a:hover {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .profile {
-      height: 2.5em;
+    height: 2.5em;
   }
 }
 
 @media (max-width: 480px) {
   .sidebar {
-      width: 60px;
+    width: 60px;
   }
 
   .sidebar a {
-      padding: 8px 3px;
-      font-size: 10px;
-      text-align: center;
+    padding: 8px 3px;
+    font-size: 10px;
+    text-align: center;
   }
 
   .sidebar a:hover {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   .profile {
-      height: 2em;
+    height: 2em;
   }
 }

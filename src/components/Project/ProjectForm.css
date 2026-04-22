@@ -1,73 +1,75 @@
 .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .project-form {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .text {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-.text input, .text select {
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
+.text input,
+.text select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .submit-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .submit-container input {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .submit-container input:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
-    .project-form {
-        padding: 15px;
-    }
+  .project-form {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 480px) {
-    .project-form {
-        padding: 10px;
-    }
+  .project-form {
+    padding: 10px;
+  }
 
-    .text {
-        margin-bottom: 10px;
-    }
+  .text {
+    margin-bottom: 10px;
+  }
 
-    .text input, .text select {
-        padding: 8px;
-        font-size: 14px;
-    }
+  .text input,
+  .text select {
+    padding: 8px;
+    font-size: 14px;
+  }
 
-    .submit-container input {
-        width: 100%;
-        font-size: 14px;
-    }
+  .submit-container input {
+    width: 100%;
+    font-size: 14px;
+  }
 }
