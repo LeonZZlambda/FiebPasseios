@@ -1,3 +1,7 @@
+/**
+ * Entry point: monta a aplicação React e configura o roteamento.
+ * @file
+ */
 import '../node_modules/bootstrap/dist/js/bootstrap.js';
 import React from 'react'
 import ReactDOM from 'react-dom/client'

@@ -1,3 +1,8 @@
+/**
+ * Componente `ProjectForm` — formulário para criar/editar passeios.
+ * @component
+ * @returns {JSX.Element}
+ */
 import './ProjectForm.css';
 
 const ProjectForm = () => {
