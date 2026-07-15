@@ -1,0 +1,171 @@
+.financial-dashboard-widgets {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.dashboard-title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.dashboard-widgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.dashboard-widget {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-border-light);
+  transition: all var(--transition-normal);
+}
+
+.dashboard-widget:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.dashboard-widget:hover::before {
+  background: var(--color-primary);
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.widget-icon {
+  font-size: 1.8rem;
+}
+
+.widget-title {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.widget-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.widget-description {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.widget-primary .widget-value {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.widget-primary:hover::before { background: var(--color-primary); }
+
+.widget-success .widget-value {
+  background: linear-gradient(135deg, var(--color-success), var(--color-success-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.widget-success:hover::before { background: var(--color-success); }
+
+.widget-warning .widget-value {
+  background: linear-gradient(135deg, var(--color-warning), var(--color-warning-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.widget-warning:hover::before { background: var(--color-warning); }
+
+.widget-danger .widget-value {
+  background: linear-gradient(135deg, var(--color-danger), var(--color-danger-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.widget-danger:hover::before { background: var(--color-danger); }
+
+.widget-info .widget-value {
+  background: linear-gradient(135deg, var(--color-info), var(--color-info-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.widget-info:hover::before { background: var(--color-info); }
+
+
+.financial-stats {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.stats-title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+}
+
+.stat-item:hover {
+  background: var(--color-background-tertiary);
+}
+
+.stat-label {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.stat-value {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .dashboard-widgets-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

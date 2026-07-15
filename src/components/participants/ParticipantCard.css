@@ -1,0 +1,101 @@
+.participant-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.participant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.participant-card-header {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.participant-card-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  flex: 1;
+}
+
+.participant-card-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.participant-card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.participant-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.participant-card-label {
+  font-weight: 500;
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.participant-card-value {
+  font-weight: 600;
+  color: #212529;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+.participant-card-notes {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.participant-card-text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.participant-card-footer {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.participant-card-btn {
+  flex: 1;
+  min-width: 80px;
+}
+
+.participant-card-attendance {
+  display: flex;
+  gap: 0.5rem;
+  flex: 2;
+}

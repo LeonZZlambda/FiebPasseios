@@ -1,0 +1,119 @@
+.payment-management-page {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.payment-management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+.payment-management-title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.payment-management-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+}
+
+.payment-management-actions .btn {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-full);
+  font-weight: var(--font-weight-semibold);
+  display: flex;
+  align-items: center;
+}
+
+.payment-management-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.payment-management-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  background: var(--glassmorphism-bg);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  margin-bottom: var(--spacing-xl);
+  width: fit-content;
+  backdrop-filter: blur(var(--glassmorphism-blur));
+  -webkit-backdrop-filter: blur(var(--glassmorphism-blur));
+}
+
+.payment-tab {
+  border: none;
+  background: transparent;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--border-radius-full);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-size: var(--font-size-caption);
+}
+
+.payment-tab:hover {
+  background-color: var(--color-background-secondary);
+  color: var(--color-primary);
+}
+
+.payment-tab.active {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.payment-management-content {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.payment-form-container {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .payment-management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  .payment-management-tabs {
+    width: 100%;
+    flex-direction: column;
+    border-radius: var(--border-radius-lg);
+  }
+  .payment-tab {
+    border-radius: var(--border-radius-md);
+    text-align: center;
+  }
+}

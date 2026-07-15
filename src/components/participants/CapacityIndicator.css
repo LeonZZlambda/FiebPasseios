@@ -1,0 +1,75 @@
+.capacity-indicator {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.capacity-small {
+  padding: 0.5rem;
+}
+
+.capacity-large {
+  padding: 1.5rem;
+}
+
+.capacity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.capacity-label {
+  font-weight: 600;
+  color: #212529;
+  font-size: 0.875rem;
+}
+
+.capacity-status {
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.capacity-progress {
+  margin-bottom: 0.75rem;
+}
+
+.capacity-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.capacity-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.capacity-detail-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.capacity-detail-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.capacity-warning {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,338 @@
+/**
+ * Pagination Component - Design System
+ * Modern SaaS Educational Administration Platform
+ */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  user-select: none;
+}
+
+.pagination-item:hover:not(:disabled) {
+  background-color: var(--color-background-secondary);
+  border-color: var(--color-border-dark);
+  color: var(--color-text-primary);
+}
+
+.pagination-item.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.pagination-item.active:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.pagination-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   PAGINATION SIZES
+   ======================================== */
+
+.pagination-sm .pagination-item {
+  min-width: 32px;
+  height: 32px;
+  padding: var(--spacing-xs);
+  font-size: var(--font-size-caption);
+  border-radius: var(--border-radius-md);
+}
+
+.pagination-md .pagination-item {
+  min-width: 40px;
+  height: 40px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-body);
+  border-radius: var(--border-radius-lg);
+}
+
+.pagination-lg .pagination-item {
+  min-width: 48px;
+  height: 48px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-body);
+  border-radius: var(--border-radius-xl);
+}
+
+/* ========================================
+   PAGINATION NAVIGATION
+   ======================================== */
+
+.pagination-prev,
+.pagination-next {
+  padding: var(--spacing-xs) var(--spacing-md);
+}
+
+.pagination-prev svg,
+.pagination-next svg {
+  width: 20px;
+  height: 20px;
+}
+
+.pagination-prev:disabled svg,
+.pagination-next:disabled svg {
+  opacity: 0.5;
+}
+
+/* ========================================
+   PAGINATION ELLIPSIS
+   ======================================== */
+
+.pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-medium);
+  user-select: none;
+}
+
+.pagination-ellipsis::before {
+  content: '...';
+}
+
+/* ========================================
+   PAGINATION INFO
+   ======================================== */
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  border-radius: var(--border-radius-lg);
+}
+
+.pagination-info-text {
+  white-space: nowrap;
+}
+
+.pagination-info-select {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-caption);
+  border-radius: var(--border-radius-md);
+  min-width: 80px;
+}
+
+/* ========================================
+   PAGINATION VARIANTS
+   ======================================== */
+
+.pagination-primary .pagination-item.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.pagination-secondary .pagination-item.active {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.pagination-success .pagination-item.active {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.pagination-warning .pagination-item.active {
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+  color: var(--color-text-primary);
+}
+
+.pagination-danger .pagination-item.active {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.pagination-info .pagination-item.active {
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+}
+
+/* ========================================
+   PAGINATION OUTLINE
+   ======================================== */
+
+.pagination-outline .pagination-item {
+  background-color: transparent;
+  border-color: var(--color-border);
+}
+
+.pagination-outline .pagination-item:hover:not(:disabled) {
+  background-color: var(--color-background-secondary);
+  border-color: var(--color-border-dark);
+}
+
+.pagination-outline .pagination-item.active {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.pagination-outline .pagination-item.active:hover {
+  background-color: var(--color-primary-200);
+  border-color: var(--color-primary-hover);
+  color: var(--color-primary-hover);
+}
+
+/* ========================================
+   PAGINATION GHOST
+   ======================================== */
+
+.pagination-ghost .pagination-item {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.pagination-ghost .pagination-item:hover:not(:disabled) {
+  background-color: var(--color-background-secondary);
+  border-color: transparent;
+}
+
+.pagination-ghost .pagination-item.active {
+  background-color: var(--color-background-secondary);
+  border-color: transparent;
+  color: var(--color-primary);
+}
+
+.pagination-ghost .pagination-item.active:hover {
+  background-color: var(--color-background-tertiary);
+  border-color: transparent;
+  color: var(--color-primary-hover);
+}
+
+/* ========================================
+   PAGINATION WITH ICONS
+   ======================================== */
+
+.pagination-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.pagination-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ========================================
+   PAGINATION COMPACT
+   ======================================== */
+
+.pagination-compact {
+  gap: var(--spacing-xs);
+}
+
+.pagination-compact .pagination-item {
+  min-width: 36px;
+  height: 36px;
+  padding: var(--spacing-xs);
+  font-size: var(--font-size-caption);
+  border-radius: var(--border-radius-md);
+}
+
+.pagination-compact .pagination-prev,
+.pagination-compact .pagination-next {
+  min-width: 36px;
+  height: 36px;
+  padding: var(--spacing-xs);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .pagination {
+    gap: var(--spacing-xs);
+  }
+  
+  .pagination-item {
+    min-width: 36px;
+    height: 36px;
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-caption);
+    border-radius: var(--border-radius-md);
+  }
+  
+  .pagination-prev,
+  .pagination-next {
+    min-width: 36px;
+    height: 36px;
+    padding: var(--spacing-xs);
+  }
+  
+  .pagination-prev svg,
+  .pagination-next svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .pagination-info {
+    width: 100%;
+    justify-content: center;
+    order: -1;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .pagination-ellipsis {
+    display: none;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.pagination-item[aria-current="page"] {
+  font-weight: var(--font-weight-semibold);
+}
+
+.pagination-item[aria-disabled="true"] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}

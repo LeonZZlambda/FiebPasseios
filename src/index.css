@@ -1,6 +1,27 @@
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+/**
+ * FiebPasseios - Global Styles
+ * Modern SaaS Educational Administration Platform
+ */
+
+/* Import Design System */
+@import './styles/design-system.css';
+@import './styles/layout-utils.css';
+
+/* Import Bootstrap Icons (keeping for icon support) */
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
+/* Import Component Styles */
+@import './components/ui/Button.css';
+@import './components/ui/Input.css';
+@import './components/ui/Select.css';
+@import './components/ui/Card.css';
+@import './components/ui/Table.css';
+@import './components/ui/Badge.css';
+@import './components/ui/Alert.css';
+@import './components/ui/Modal.css';
+@import './components/ui/Pagination.css';
+
+/* Legacy Table Wrapper (for backward compatibility) */
 .table-wrapper {
   max-height: 69vh;
   overflow-y: auto;

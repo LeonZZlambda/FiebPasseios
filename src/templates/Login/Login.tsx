@@ -6,60 +6,60 @@ import './Login.css';
 export default function Login(): JSX.Element {
   const navigate = useNavigate();
 
-  const goto = () => {
+  const goto = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     navigate('/Home');
   };
 
-  const backto = () => {
+  const backto = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     navigate('/');
   };
 
   return (
-    <div className="container">
-      <form action="" className="login-form">
-        <div className="login-logo">
-          <img src={fiebWhite} alt="logo" className="fieb-login" />
+    <div className="login-page">
+      <div className="container login-container">
+        <div className="card card-xl card-elevated login-card">
+          <div className="card-body login-card-body">
+            <img src={fiebWhite} alt="FIEB Logo" className="login-logo" />
+
+            <form className="login-form">
+              <div className="mb-md">
+                <label htmlFor="email" className="login-label">
+                  Email
+                </label>
+                <input type="email" id="email" className="form-control login-input" required />
+              </div>
+
+              <div className="mb-md">
+                <label htmlFor="password" className="login-label">
+                  Senha
+                </label>
+                <input type="password" id="password" className="form-control login-input" required />
+              </div>
+
+              <div className="login-help">
+                <Link to="/forgotpass" className="login-forgot-link">
+                  Esqueceu a senha?
+                </Link>
+              </div>
+
+              <div className="d-none mb-md" id="infos">
+                <p className="login-error">Dados incorretos.</p>
+              </div>
+
+              <div className="login-actions">
+                <button className="btn btn-outline-light login-secondary-btn" type="button" onClick={backto}>
+                  Cancelar
+                </button>
+                <button className="btn btn-primary login-primary-btn" type="submit" onClick={goto}>
+                  Entrar
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label mb-0 fw-bold">
-            Email:
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="form-control text-center fw-medium shadow"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="password" className="form-label mb-0 fw-bold">
-            Senha:
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="form-control text-center fw-medium shadow"
-            required
-          />
-        </div>
-        <div className="d-flex flex-row-reverse mt-1">
-          <p className="fw-bold fst-italic opacity-75 me-1">
-            Esqueceu a senha?
-            <Link to={'/forgotpass'}> Clique aqui.</Link>
-          </p>
-        </div>
-        <div className="d-flex justify-content-center my-1 d-none" id="infos">
-          <p className="fw-bold fst-italic text-danger">Dados Incorretos!!!</p>
-        </div>
-        <div className="d-flex justify-content-around mb-3 mt-2">
-          <button className="btn btn-danger fw-medium shadow" type="button" onClick={backto}>
-            Cancelar
-          </button>
-          <button className="btn btn-success fw-medium shadow" type="submit" onClick={goto}>
-            Entrar
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   );
 }

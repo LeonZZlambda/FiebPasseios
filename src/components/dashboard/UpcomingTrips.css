@@ -1,0 +1,194 @@
+.upcoming-trips {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.upcoming-trips-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.upcoming-trips-title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.upcoming-trips-loading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.upcoming-trips-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.upcoming-trips-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  flex: 1;
+  overflow-y: auto;
+  max-height: 320px;
+}
+
+.upcoming-trip-card {
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.upcoming-trip-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.upcoming-trip-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.upcoming-trip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.upcoming-trip-title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+.upcoming-trip-destination {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.destination-icon {
+  font-size: 1rem;
+}
+
+.destination-text {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+
+.upcoming-trip-dates {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.trip-date {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.date-icon {
+  font-size: 0.875rem;
+}
+
+.date-text {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+
+.upcoming-trip-capacity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.capacity-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.capacity-icon {
+  font-size: 0.875rem;
+}
+
+.capacity-text {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.capacity-bar {
+  height: 6px;
+  background-color: var(--color-background-tertiary);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+.capacity-fill {
+  height: 100%;
+  border-radius: var(--border-radius-full);
+  transition: width var(--transition-normal);
+}
+
+.capacity-low .capacity-fill {
+  background-color: var(--color-success);
+}
+
+.capacity-medium .capacity-fill {
+  background-color: var(--color-primary);
+}
+
+.capacity-high .capacity-fill {
+  background-color: var(--color-warning);
+}
+
+.capacity-full .capacity-fill {
+  background-color: var(--color-danger);
+}
+
+@media (min-width: 768px) {
+  .upcoming-trips {
+    padding: var(--spacing-lg);
+  }
+
+  .upcoming-trips-list {
+    max-height: 400px;
+  }
+
+  .upcoming-trip-card {
+    padding: var(--spacing-md);
+  }
+
+  .upcoming-trip-dates {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+
+  .upcoming-trip-title {
+    font-size: var(--font-size-body);
+  }
+}

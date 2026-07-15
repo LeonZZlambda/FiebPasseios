@@ -1,0 +1,63 @@
+.payment-history {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.payment-history .table {
+  margin: 0;
+}
+
+.payment-history .table thead th {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.875rem;
+  border-bottom: 2px solid #dee2e6;
+  background: #f8f9fa;
+}
+
+.payment-history .table tbody td {
+  font-size: 0.875rem;
+  color: #212529;
+  vertical-align: middle;
+}
+
+.payment-history-row-clickable {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.payment-history-row-clickable:hover {
+  background-color: #f8f9fa;
+}
+
+.payment-history-amount {
+  font-weight: 600;
+  color: #212529;
+}
+
+.payment-history-participant,
+.payment-history-trip {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .payment-history {
+    padding: 1rem;
+  }
+
+  .payment-history .table thead th,
+  .payment-history .table tbody td {
+    font-size: 0.75rem;
+  }
+
+  .payment-history-participant,
+  .payment-history-trip {
+    max-width: 150px;
+  }
+}

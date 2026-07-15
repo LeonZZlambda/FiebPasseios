@@ -1,12 +1,9 @@
 import React from 'react';
-import Sidebar from '../../components/Menu/Sidebar';
 import ProjectForm from '../../components/Project/ProjectForm';
 
 export default function CriarPasseio(): JSX.Element {
   return (
-    <div className="d-flex">
-      <Sidebar />
-      <div className="p-3 w-100">
+    <div>
         <nav className="fieb-logo">
           <br />
           <h1 className="title-bold">Vamos Viajar?</h1>
@@ -16,6 +13,5 @@ export default function CriarPasseio(): JSX.Element {
           </div>
         </nav>
       </div>
-    </div>
   );
 }

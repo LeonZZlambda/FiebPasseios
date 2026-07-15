@@ -1,0 +1,169 @@
+.quick-actions {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-actions-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.quick-actions-title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.quick-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-caption);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  height: 100%;
+  min-height: 84px;
+}
+
+.quick-action-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quick-action-btn.quick-action-primary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary-200);
+}
+
+.quick-action-btn.quick-action-primary:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+.quick-action-btn.quick-action-success {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+  border-color: var(--color-success-200);
+}
+
+.quick-action-btn.quick-action-success:hover:not(:disabled) {
+  background-color: var(--color-success);
+  color: var(--color-text-inverse);
+  border-color: var(--color-success);
+}
+
+.quick-action-btn.quick-action-warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+  border-color: var(--color-warning-200);
+}
+
+.quick-action-btn.quick-action-warning:hover:not(:disabled) {
+  background-color: var(--color-warning);
+  color: var(--color-text-primary);
+  border-color: var(--color-warning);
+}
+
+.quick-action-btn.quick-action-danger {
+  background-color: var(--color-danger-light);
+  color: var(--color-danger);
+  border-color: var(--color-danger-200);
+}
+
+.quick-action-btn.quick-action-danger:hover:not(:disabled) {
+  background-color: var(--color-danger);
+  color: var(--color-text-inverse);
+  border-color: var(--color-danger);
+}
+
+.quick-action-btn.quick-action-info {
+  background-color: var(--color-info-light);
+  color: var(--color-info);
+  border-color: var(--color-info-200);
+}
+
+.quick-action-btn.quick-action-info:hover:not(:disabled) {
+  background-color: var(--color-info);
+  color: var(--color-text-inverse);
+  border-color: var(--color-info);
+}
+
+.quick-action-btn.quick-action-secondary {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-700);
+  border-color: var(--color-neutral-200);
+}
+
+.quick-action-btn.quick-action-secondary:hover:not(:disabled) {
+  background-color: var(--color-neutral-600);
+  color: var(--color-text-inverse);
+  border-color: var(--color-neutral-600);
+}
+
+.quick-action-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.quick-action-label {
+  text-align: center;
+  line-height: var(--line-height-normal);
+}
+
+@media (min-width: 576px) {
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .quick-actions {
+    padding: var(--spacing-lg);
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .quick-action-btn {
+    padding: var(--spacing-md);
+    min-height: 100px;
+  }
+
+  .quick-action-icon {
+    font-size: 1.75rem;
+  }
+
+  .quick-action-label {
+    font-size: var(--font-size-caption);
+  }
+}

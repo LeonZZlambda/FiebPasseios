@@ -10,6 +10,7 @@ interface ImageUploaderModalProps {
 const ImageUploaderModal: FC<ImageUploaderModalProps> = ({ setFile, setImage, chosenImage }) => {
   const [currentFile, setCurrentFile] = useState<File | undefined>(undefined);
   const [previewImage, setPreviewImage] = useState<string | undefined>(undefined);
+  const [isOpen, setIsOpen] = useState(false);
 
   const selectFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event?.target?.files && event.target.files[0];
@@ -25,11 +26,13 @@ const ImageUploaderModal: FC<ImageUploaderModalProps> = ({ setFile, setImage, ch
 
   const confirmFile = () => {
     setImage(previewImage);
+    setIsOpen(false);
   };
 
   const deleteFile = () => {
     setCurrentFile(undefined);
     setPreviewImage(undefined);
+    setIsOpen(false);
   };
 
   return (
@@ -37,18 +40,20 @@ const ImageUploaderModal: FC<ImageUploaderModalProps> = ({ setFile, setImage, ch
       <button
         type="button"
         className="btn btn-primary my-2"
-        data-bs-toggle="modal"
-        data-bs-target="#imageModal"
+        onClick={() => setIsOpen(true)}
       >
         {currentFile == undefined ? 'Escolher uma imagem' : 'Trocar a imagem'}
       </button>
 
+      {isOpen && <div className="modal-backdrop" onClick={() => setIsOpen(false)} />}
+
       <div
-        className="modal fade"
+        className={`modal fade ${isOpen ? 'show d-block' : 'd-none'}`}
         id="imageModal"
         tabIndex={-1}
         aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
+        aria-hidden={!isOpen}
+        role="dialog"
       >
         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
@@ -59,8 +64,8 @@ const ImageUploaderModal: FC<ImageUploaderModalProps> = ({ setFile, setImage, ch
               <button
                 type="button"
                 className="btn-close"
-                data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={() => setIsOpen(false)}
               ></button>
             </div>
             <div className="modal-body">
@@ -101,7 +106,6 @@ const ImageUploaderModal: FC<ImageUploaderModalProps> = ({ setFile, setImage, ch
                 type="button"
                 onClick={deleteFile}
                 className="btn btn-warning"
-                data-bs-dismiss="modal"
               >
                 Cancelar
               </button>
@@ -109,7 +113,6 @@ const ImageUploaderModal: FC<ImageUploaderModalProps> = ({ setFile, setImage, ch
                 type="button"
                 onClick={confirmFile}
                 className="btn btn-primary"
-                data-bs-dismiss="modal"
               >
                 Confirmar
               </button>

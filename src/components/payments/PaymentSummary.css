@@ -1,0 +1,124 @@
+.payment-summary {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.summary-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.summary-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.summary-tab {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6c757d;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.summary-tab:hover {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+.summary-tab.active {
+  background: #0d6efd;
+  color: white;
+}
+
+.summary-content {
+  min-height: 200px;
+}
+
+.summary-view {
+  animation: fadeIn 0.3s ease;
+}
+
+.summary-view-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.summary-view .table {
+  margin: 0;
+}
+
+.summary-view .table thead th {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.875rem;
+  border-bottom: 2px solid #dee2e6;
+  background: #f8f9fa;
+}
+
+.summary-view .table tbody td {
+  font-size: 0.875rem;
+  color: #212529;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .summary-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .summary-actions {
+    width: 100%;
+  }
+
+  .summary-actions .btn {
+    flex: 1;
+  }
+
+  .summary-tabs {
+    flex-wrap: wrap;
+  }
+
+  .summary-tab {
+    flex: 1;
+    min-width: 100px;
+  }
+}

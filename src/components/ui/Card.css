@@ -1,0 +1,509 @@
+/**
+ * Card Component - Design System
+ * Modern SaaS Educational Administration Platform
+ */
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-md);
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card-flat {
+  box-shadow: none;
+  border: 1px solid var(--color-border-light);
+}
+
+.card-flat:hover {
+  border-color: var(--color-border);
+  transform: none;
+}
+
+.card-glass {
+  background: var(--glassmorphism-bg);
+  backdrop-filter: blur(var(--glassmorphism-blur));
+  -webkit-backdrop-filter: blur(var(--glassmorphism-blur));
+  border: 1px solid var(--glassmorphism-border);
+  box-shadow: var(--glassmorphism-shadow);
+}
+
+/* ========================================
+   CARD SIZES
+   ======================================== */
+
+.card-sm {
+  padding: var(--spacing-md);
+}
+
+.card-md {
+  padding: var(--spacing-lg);
+}
+
+.card-lg {
+  padding: var(--spacing-xl);
+}
+
+.card-xl {
+  padding: var(--spacing-2xl);
+}
+
+/* ========================================
+   CARD HEADER
+   ======================================== */
+
+.card-header {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--spacing-md);
+}
+
+.card-header-title {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.card-header-subtitle {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  margin: var(--spacing-xs) 0 0 0;
+}
+
+.card-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* ========================================
+   CARD BODY
+   ======================================== */
+
+.card-body {
+  padding: var(--spacing-md);
+  flex: 1;
+}
+
+.card-body-title {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.card-body-text {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.card-body-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   CARD FOOTER
+   ======================================== */
+
+.card-footer {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: var(--spacing-md);
+}
+
+.card-footer-actions {
+  display: flex;
+  align-items: stretch;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.card-footer-left {
+  display: flex;
+  align-items: stretch;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.card-footer-right {
+  display: flex;
+  align-items: stretch;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   CARD IMAGE
+   ======================================== */
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-image-top {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.card-image-bottom {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.card-image-sm {
+  height: 120px;
+}
+
+.card-image-md {
+  height: 160px;
+}
+
+.card-image-lg {
+  height: 220px;
+}
+
+/* ========================================
+   CARD WITH IMAGE
+   ======================================== */
+
+.card-with-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-with-image .card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-with-image .card-header,
+.card-with-image .card-body,
+.card-with-image .card-footer {
+  padding: var(--spacing-md);
+}
+
+/* ========================================
+   CARD HORIZONTAL
+   ======================================== */
+
+.card-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.card-horizontal .card-image {
+  width: 100%;
+  height: 180px;
+  border-right: none;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.card-horizontal .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-horizontal .card-header,
+.card-horizontal .card-body,
+.card-horizontal .card-footer {
+  padding: var(--spacing-md);
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .card-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-body {
+    padding: var(--spacing-lg);
+  }
+
+  .card-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  .card-image-sm {
+    height: 150px;
+  }
+
+  .card-image-md {
+    height: 200px;
+  }
+
+  .card-image-lg {
+    height: 300px;
+  }
+
+  .card-with-image .card-header,
+  .card-with-image .card-body,
+  .card-with-image .card-footer {
+    padding: var(--spacing-lg);
+  }
+
+  .card-horizontal {
+    flex-direction: row;
+  }
+
+  .card-horizontal .card-image {
+    width: 300px;
+    height: auto;
+    border-right: 1px solid var(--color-border-light);
+    border-bottom: none;
+  }
+
+  .card-horizontal .card-header,
+  .card-horizontal .card-body,
+  .card-horizontal .card-footer {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ========================================
+   CARD VARIANTS
+   ======================================== */
+
+.card-primary {
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-surface) 100%);
+}
+
+.card-primary .card-header-title {
+  color: var(--color-primary);
+}
+
+.card-secondary {
+  border-color: var(--color-secondary);
+  background: linear-gradient(135deg, var(--color-secondary-light) 0%, var(--color-surface) 100%);
+}
+
+.card-secondary .card-header-title {
+  color: var(--color-secondary);
+}
+
+.card-success {
+  border-color: var(--color-success);
+  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-surface) 100%);
+}
+
+.card-success .card-header-title {
+  color: var(--color-success);
+}
+
+.card-warning {
+  border-color: var(--color-warning);
+  background: linear-gradient(135deg, var(--color-warning-light) 0%, var(--color-surface) 100%);
+}
+
+.card-warning .card-header-title {
+  color: var(--color-warning);
+}
+
+.card-danger {
+  border-color: var(--color-danger);
+  background: linear-gradient(135deg, var(--color-danger-light) 0%, var(--color-surface) 100%);
+}
+
+.card-danger .card-header-title {
+  color: var(--color-danger);
+}
+
+.card-info {
+  border-color: var(--color-info);
+  background: linear-gradient(135deg, var(--color-info-light) 0%, var(--color-surface) 100%);
+}
+
+.card-info .card-header-title {
+  color: var(--color-info);
+}
+
+/* ========================================
+   CARD GRID
+   ======================================== */
+
+.card-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.card-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid-auto {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* ========================================
+   CARD METRICS
+   ======================================== */
+
+.card-metric {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.card-metric-value {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+.card-metric-label {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.card-metric-change {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.card-metric-change.positive {
+  color: var(--color-success);
+}
+
+.card-metric-change.negative {
+  color: var(--color-danger);
+}
+
+.card-metric-change.neutral {
+  color: var(--color-text-secondary);
+}
+
+/* ========================================
+   CARD ACTIONS
+   ======================================== */
+
+.card-action {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  background-color: var(--color-background-secondary);
+  transition: all var(--transition-normal);
+}
+
+.card-action:hover {
+  background-color: var(--color-background-tertiary);
+}
+
+.card-action-text {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.card-action:hover .card-action-text {
+  color: var(--color-primary-hover);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .card-grid-2,
+  .card-grid-3,
+  .card-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-horizontal {
+    flex-direction: column;
+  }
+  
+  .card-horizontal .card-image {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: var(--spacing-md);
+  }
+  
+  .card-header-title {
+    font-size: var(--font-size-body);
+  }
+  
+  .card-body-title {
+    font-size: var(--font-size-body);
+  }
+}

@@ -1,0 +1,73 @@
+.skeleton {
+  background: linear-gradient(90deg, var(--color-background-secondary) 25%, var(--color-background-tertiary) 50%, var(--color-background-secondary) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--border-radius-md);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-text {
+  height: 1em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skeleton-text-sm {
+  height: 0.875em;
+}
+
+.skeleton-text-lg {
+  height: 1.5em;
+}
+
+.skeleton-title {
+  height: 2em;
+  margin-bottom: var(--spacing-md);
+}
+
+.skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.skeleton-avatar-sm {
+  width: 32px;
+  height: 32px;
+}
+
+.skeleton-avatar-lg {
+  width: 48px;
+  height: 48px;
+}
+
+.skeleton-card {
+  height: 120px;
+  border-radius: var(--border-radius-lg);
+}
+
+.skeleton-metric {
+  height: 80px;
+  border-radius: var(--border-radius-lg);
+}
+
+.skeleton-button {
+  height: 40px;
+  width: 120px;
+  border-radius: var(--border-radius-lg);
+}
+
+.skeleton-rect {
+  border-radius: var(--border-radius-md);
+}
+
+.skeleton-circle {
+  border-radius: 50%;
+}

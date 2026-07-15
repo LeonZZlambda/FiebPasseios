@@ -1,76 +1,90 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Sidebar from '../../components/Menu/Sidebar';
 
-import './Home.css';
-
-import chevron from '../../assets/images/chevron.png';
+const defaultTripImage = '/static/home.png';
 
 export default function Home(): JSX.Element {
   const [data, setData] = useState<any[]>([]);
-  const carousel = useRef<HTMLDivElement | null>(null);
+  const [visibleCount, setVisibleCount] = useState(4);
 
   useEffect(() => {
     fetch('/static/passeios.json')
       .then((response) => response.json())
-      .then(setData);
+      .then(setData)
+      .catch((err) => console.error('Failed to load passeios:', err));
   }, []);
 
-  const handleLeftClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    if (carousel.current) {
-      carousel.current.scrollLeft -= carousel.current.offsetWidth;
-    }
-  };
-
-  const handleRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    if (carousel.current) {
-      carousel.current.scrollLeft += carousel.current.offsetWidth;
-    }
-  };
+  const visibleTrips = data.slice(0, visibleCount);
 
   return (
-    <div className="d-flex">
-      <Sidebar />
-      <div className="p-3 w-100">
-        <nav className="fieb-logo-menu">
-          <h1 className="title-bold">Passeios Disponíveis</h1>
-          <h3>Passeios que estão em andamento e podem ser editados:</h3>
-          <div className="carousel" ref={carousel}>
-            {data.map((item: any) => {
+    <div>
+      <div className="mb-2xl">
+        <h1 className="h1 text-primary mb-xs">Passeios Disponíveis</h1>
+        <h2 className="h4 text-secondary font-regular">Passeios que estão em andamento e podem ser editados:</h2>
+      </div>
+
+      <div className="card-grid card-grid-auto">
+        {visibleTrips.map((item: any) => {
               const { id, name, quant, price, unitd, local, data: dateField, image } = item;
               return (
-                <div className="item" key={id}>
-                  <div className="image">
-                    <img src={image} alt={name} />
-                  </div>
-                  <div className="info">
-                    <span className="name">{name}</span>
-                    <span className="quant">quant. de alunos: {quant}</span>
-                    <span className="unitd">{unitd}</span>
-                    <span className="locate">{local}</span>
-                    <span className="data">data: {dateField}</span>
-                    <span className="price">preço: R${price}</span>
-                    <span className="view">
-                      <Link to="/editar">Editar</Link>
-                    </span>
-                  </div>
+                <div className="card card-elevated" key={id}>
+                  {image && (
+                    <img
+                      src={image}
+                      alt={name}
+                      className="card-image card-image-top"
+                      loading="lazy"
+                      decoding="async"
+                      width="640"
+                      height="360"
+                      onError={(event) => {
+                        const target = event.currentTarget;
+                        if (target.src !== defaultTripImage) {
+                          target.src = defaultTripImage;
+                        }
+                      }}
+                    />
+                  )}
+              <div className="card-body">
+                <h3 className="card-body-title">{name}</h3>
+                <div className="mb-md">
+                  <span className="badge badge-solid-primary mr-sm">{unitd}</span>
                 </div>
-              );
-            })}
-          </div>
-          <div className="buttons">
-            <button onClick={handleLeftClick}>
-              <img src={chevron} alt="scroll left" />
-            </button>
-            <button onClick={handleRightClick}>
-              <img src={chevron} alt="scroll right" />
-            </button>
-          </div>
-          <br /> <br />
-        </nav>
+                <div className="text-secondary small mb-xs d-flex align-items-center">
+                  <i className="bi bi-geo-alt mr-xs"></i> {local}
+                </div>
+                <div className="text-secondary small mb-xs d-flex align-items-center">
+                  <i className="bi bi-calendar mr-xs"></i> {dateField}
+                </div>
+                <div className="text-secondary small mb-xs d-flex align-items-center">
+                  <i className="bi bi-people mr-xs"></i> {quant} alunos
+                </div>
+                <div className="text-primary font-bold mt-md h3">
+                  R$ {price}
+                </div>
+              </div>
+              <div className="card-footer">
+                <Link
+                  to={`/trips/${id}/edit`}
+                  className="btn btn-primary w-100 text-center text-inverse"
+                  style={{ textDecoration: 'none' }}
+                  aria-label={`Editar passeio ${name}`}
+                >
+                  Editar {name}
+                </Link>
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+      {data.length > visibleCount && (
+        <div className="d-flex justify-content-center mt-xl">
+          <button type="button" className="btn btn-outline-primary" onClick={() => setVisibleCount((count) => count + 4)}>
+            Carregar mais passeios
+          </button>
+        </div>
+      )}
     </div>
   );
 }

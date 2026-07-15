@@ -1,0 +1,92 @@
+.financial-report {
+  margin-bottom: 2rem;
+}
+
+.financial-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.financial-card {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.financial-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.financial-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.financial-success {
+  color: #198754;
+}
+
+.financial-warning {
+  color: #ffc107;
+}
+
+.financial-danger {
+  color: #dc3545;
+}
+
+.financial-secondary {
+  color: #6c757d;
+}
+
+.financial-details {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.financial-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.financial-details .table {
+  margin: 0;
+}
+
+.financial-details .table thead th {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.875rem;
+  border-bottom: 2px solid #dee2e6;
+  background: #f8f9fa;
+}
+
+.financial-details .table tbody td {
+  font-size: 0.875rem;
+  color: #212529;
+}
+
+@media (max-width: 768px) {
+  .financial-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-details {
+    padding: 1rem;
+  }
+}

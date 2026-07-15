@@ -1,71 +1,78 @@
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
-import Sidebar from '../../components/Menu/Sidebar';
 import logo from '../../assets/images/home.png';
+import './Mensagem.css';
+
+type MensagemItem = {
+  id: string;
+  date: string;
+  sender: string;
+  email: string;
+  status: 'Nova' | 'Lida' | 'Arquivada';
+  subject: string;
+  excerpt: string;
+  message: string;
+};
 
 export default function MensagemLer(): JSX.Element {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const message = (location.state as MensagemItem | undefined) ?? {
+    id: '1',
+    date: '14/07/2026',
+    sender: 'Ana Silva',
+    email: 'ana.silva@email.com',
+    status: 'Nova',
+    subject: 'Sugestão para o passeio do MASP',
+    excerpt: 'Gostaria de sugerir uma melhor organização dos grupos de saída...',
+    message:
+      'Gostaria de sugerir uma melhor organização dos grupos de saída. Acho que isso ajudaria bastante no embarque dos alunos e evitaria atrasos.',
+  };
+
   return (
-    <div className="d-flex">
-      <Sidebar />
-      <div className="p-3 w-100">
-        <Header goto={'/mensagem'} title={'Ler Mensagem'} logo={logo} />
-        <section className="m-2 p-2 shadow-lg">
-          <form className="mx-5 p-2 border">
-            <div className="row my-3 g-1">
-              <label htmlFor="inputID" className="col-md-1 col-form-label">
-                ID:
-              </label>
-              <div className="col-md-2">
-                <input type="text" className="form-control" id="inputID" readOnly />
-              </div>
-
-              <label htmlFor="inputData" className="col-md-2 col-form-label">
-                Data:
-              </label>
-              <div className="col-md-3">
-                <input type="text" className="form-control" id="inputData" readOnly />
-              </div>
-
-              <label htmlFor="inputStatus" className="col-md-2 col-form-label">
-                Status:
-              </label>
-              <div className="col-md-2">
-                <input type="text" className="form-control" id="inputStatus" readOnly />
-              </div>
+    <div className="management-page">
+      <Header goto="/mensagem" title="Ler Avaliação" logo={logo} />
+      <div className="container management-shell">
+        <section className="management-card">
+          <div className="message-detail-header">
+            <div>
+              <span className={`status-pill status-${message.status.toLowerCase()}`}>{message.status}</span>
+              <h1 className="management-title mt-3">{message.subject}</h1>
+              <p className="management-description mb-0">{message.excerpt}</p>
             </div>
-            <div className="row mb-1">
-              <label htmlFor="inputEmissor" className="col-md-2 col-form-label">
-                Emissor:
-              </label>
-              <div className="col-md-10">
-                <input type="text" className="form-control" id="inputEmissor" readOnly />
-              </div>
-            </div>
-            <div className="row mb-3">
-              <label htmlFor="inputEmail" className="col-md-2 col-form-label">
-                Email:
-              </label>
-              <div className="col-md-10">
-                <input type="email" className="form-control" id="inputEmail" readOnly />
-              </div>
-            </div>
-
-            <div className="col-md-12 mb-2">
-              <label htmlFor="inputTexto" className="form-label">
-                Mensagem:
-              </label>
-              <textarea rows={5} className="form-control" id="inputTexto"></textarea>
-            </div>
-
-            <div className="col-12 d-flex justify-content-around">
-              <button type="submit" className="btn btn-warning">
-                Marcar com Lida
+            <div className="message-detail-actions">
+              <button className="btn btn-outline-secondary" onClick={() => navigate('/mensagem')}>
+                Voltar
               </button>
-              <button type="submit" className="btn btn-danger">
-                Inativar
-              </button>
+              <button className="btn btn-warning">Marcar como lida</button>
+              <button className="btn btn-outline-danger">Arquivar</button>
             </div>
-          </form>
+          </div>
+
+          <div className="message-detail-grid">
+            <div className="message-detail-meta">
+              <span>ID</span>
+              <strong>{message.id}</strong>
+            </div>
+            <div className="message-detail-meta">
+              <span>Data</span>
+              <strong>{message.date}</strong>
+            </div>
+            <div className="message-detail-meta">
+              <span>Emissor</span>
+              <strong>{message.sender}</strong>
+            </div>
+            <div className="message-detail-meta">
+              <span>Email</span>
+              <strong>{message.email}</strong>
+            </div>
+          </div>
+
+          <div className="message-body">
+            <h2 className="message-body-title">Mensagem</h2>
+            <p>{message.message}</p>
+          </div>
         </section>
       </div>
     </div>

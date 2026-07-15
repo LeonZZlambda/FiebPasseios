@@ -1,0 +1,89 @@
+.reports-page {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reports-header {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.reports-title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reports-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+}
+
+.reports-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  background: var(--glassmorphism-bg);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  margin-bottom: var(--spacing-2xl);
+  backdrop-filter: blur(var(--glassmorphism-blur));
+  -webkit-backdrop-filter: blur(var(--glassmorphism-blur));
+}
+
+.report-tab {
+  border: none;
+  background: transparent;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius-full);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-size: var(--font-size-caption);
+}
+
+.report-tab:hover {
+  background-color: var(--color-background-secondary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.report-tab.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.reports-content {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .reports-tabs {
+    border-radius: var(--border-radius-lg);
+  }
+  .report-tab {
+    flex: 1 1 30%;
+    text-align: center;
+    border-radius: var(--border-radius-md);
+  }
+}

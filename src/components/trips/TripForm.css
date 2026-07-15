@@ -1,0 +1,76 @@
+.trip-form {
+  padding: var(--spacing-md);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.trip-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.trip-form-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.trip-form-col-full {
+  grid-column: 1 / -1;
+}
+
+.trip-form-col-half {
+  grid-column: span 1;
+}
+
+.trip-form-col-third {
+  grid-column: span 1;
+}
+
+@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .trip-form {
+    padding: var(--spacing-xl);
+  }
+
+  .trip-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .trip-form-col-half,
+  .trip-form-col-third {
+    grid-column: span 1;
+  }
+}
+
+.trip-form-actions {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: stretch;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--spacing-md);
+}
+
+.trip-form-actions .btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .trip-form-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+  }
+
+  .trip-form-actions .btn {
+    width: auto;
+    min-width: 120px;
+  }
+}

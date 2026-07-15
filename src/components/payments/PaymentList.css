@@ -1,0 +1,12 @@
+.payment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .payment-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,139 @@
+.metrics-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.metrics-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.metrics-card-clickable {
+  cursor: pointer;
+}
+
+.metrics-card-clickable:hover {
+  border-color: var(--color-primary);
+}
+
+.metrics-card-loading {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metrics-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.metrics-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius-lg);
+  font-size: 1.5rem;
+}
+
+.metrics-card-primary .metrics-card-icon {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.metrics-card-secondary .metrics-card-icon {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.metrics-card-success .metrics-card-icon {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.metrics-card-warning .metrics-card-icon {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.metrics-card-danger .metrics-card-icon {
+  background-color: var(--color-danger-light);
+  color: var(--color-danger);
+}
+
+.metrics-card-info .metrics-card-icon {
+  background-color: var(--color-info-light);
+  color: var(--color-info);
+}
+
+.metrics-card-title {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.metrics-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.metrics-card-value {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+.metrics-card-change {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+}
+
+.metrics-card-change.positive {
+  color: var(--color-success);
+}
+
+.metrics-card-change.negative {
+  color: var(--color-danger);
+}
+
+.change-value {
+  font-weight: var(--font-weight-semibold);
+}
+
+.change-text {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .metrics-card {
+    padding: var(--spacing-md);
+  }
+
+  .metrics-card-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .metrics-card-value {
+    font-size: var(--font-size-h2);
+  }
+}
